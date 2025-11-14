@@ -16,4 +16,4 @@ RUN ln -s /data/uploads /app/uploads && ln -s /data/extensions /app/extensions
 
 EXPOSE 8055
 
-CMD ["npx", "directus", "start"]
+CMD ["sh", "-c", "npx directus database migrate:latest && npx directus start"]
