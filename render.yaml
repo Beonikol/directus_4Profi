@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: directus-4profi
+    env: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_CLIENT
+        value: pg
+      - key: DB_HOST
+        value: dpg-d4avmnk9c44c738qsmi0-a.oregon-postgres.render.com
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: directus_pnkw
+      - key: DB_USER
+        value: directus_user
+      - key: DB_PASSWORD
+        value: ZTtzaYw1npYhfVh788JxrQ7G9tQMiWH6
+      - key: DB_SSL
+        value: true
