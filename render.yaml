@@ -20,6 +20,10 @@ services:
         value: ...
       - key: DB_SSL
         value: true
+      - key: CORS_ENABLED
+        value: true
+      - key: CORS_ORIGIN
+        value: "*"
     disk:
       name: directus_disk
       mountPath: /data
