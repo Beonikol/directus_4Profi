@@ -1,19 +1,19 @@
 FROM node:20
 
-# 1. Робоча папка
 WORKDIR /app
 
-# 2. Встановлення Directus
 RUN npm install -g directus
 
-# 3. Копіюємо всі файли проєкту
 COPY . .
 
-# 4. Встановлюємо залежності
 RUN npm install
 
-# 5. Відкриваємо порт
+# 🔧 Створюємо директорії в /data
+RUN mkdir -p /data/uploads /data/extensions
+
+# 🔗 Символічні лінки
+RUN ln -s /data/uploads /app/uploads && ln -s /data/extensions /app/extensions
+
 EXPOSE 8055
 
-# 6. Запускаємо Directus
 CMD ["npx", "directus", "start"]

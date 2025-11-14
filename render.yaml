@@ -9,7 +9,7 @@ services:
       - key: DB_CLIENT
         value: pg
       - key: DB_HOST
-        value: dpg-d4avmnk9c44c738qsmi0-a.oregon-postgres.render.com
+        value: dpg-...oregon-postgres.render.com
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
@@ -17,9 +17,10 @@ services:
       - key: DB_USER
         value: directus_user
       - key: DB_PASSWORD
-        value: ZTtzaYw1npYhfVh788JxrQ7G9tQMiWH6
+        value: ...
       - key: DB_SSL
         value: true
     disk:
-      name: uploads
-      mountPath: /app/uploads
+      name: directus_disk
+      mountPath: /data
+      sizeGB: 1
