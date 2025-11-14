@@ -20,3 +20,6 @@ services:
         value: ZTtzaYw1npYhfVh788JxrQ7G9tQMiWH6
       - key: DB_SSL
         value: true
+    disk:
+      name: uploads
+      mountPath: /app/uploads
